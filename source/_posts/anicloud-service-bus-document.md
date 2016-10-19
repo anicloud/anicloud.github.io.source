@@ -42,7 +42,7 @@ ServiceBus 为Octopus 核心提供对外的应用（服务）接入，以及基�
 
 ### 领域对象设计
 
-  ![domain](images/anicloud/service-bus-domain.png)
+  ![domain](/images/anicloud/service-bus-domain.png)
 
 * __AniSerAccountObj__ 
 
@@ -69,21 +69,21 @@ ServiceBus 为Octopus 核心提供对外的应用（服务）接入，以及基�
 * __基于http 协议的开放接口设计__  ServiceBus 采用SpringMVC 实现http 接口的发布，主要包括核心类：
   * AccountController，AccountGroupController
 
-  ![Account-Controller](images/anicloud/account-group-controller.png)
+  ![Account-Controller](/images/anicloud/account-group-controller.png)
 
   * AniServiceController
 
-  ![AniServiceController](images/anicloud/aniservice-controller.png)
+  ![AniServiceController](/images/anicloud/aniservice-controller.png)
 
   * DeviceObjController
   
-  ![DeviceObjController](images/anicloud/deviceobj-controller.png)
+  ![DeviceObjController](/images/anicloud/deviceobj-controller.png)
   
 
 * __基于WebSocket 设计的开放接口设计__
   * WebSocketServer 系统采用WebSocket 实现与第三方服务的全双工通信。WebSocket 通道主要实现对Object 的Stub 的同步/异步访问，Object的状态维护，消息的推送等功能。
   
-  ![websocket](images/anicloud/websocket.png)
+  ![websocket](/images/anicloud/websocket.png)
 
 ### 核心业务类
 * AniServiceManagerFacade 第三方服务核心业务类
@@ -132,7 +132,7 @@ ServiceBus 提供了客户端**SDK** 开发者工具包，帮助第三方开发�
 ## 部署要求
 * 由于Spring 采用AOP 的方式实现DDD，为了让程序的war 包能够顺利发布到Tomcat 容器中，需要设置对应的环境变量。在tomcat 的bin 目录下的setenv.sh 文件中添加如下配置。如下图所示。
 
- ![tomcat](images/anicloud/tomcat_config.png)
+ ![tomcat](/images/anicloud/tomcat_config.png)
 
 * tomcat 默认只支持50MB大小的文件上传，如果war 包过大需要修改tomcat 的配置文件。具体可网络搜索。
 
